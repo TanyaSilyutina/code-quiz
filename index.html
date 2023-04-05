@@ -3,13 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <title>Quiz Game</title>
+    <link rel="stylesheet" type="text/css" href="./assets/reset.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/style.css" />
+
 </head>
 <body>
 <header>
 
 </header>
 <main>
+    <!-- container for high scores -->
+    <div class="high-scores-container">
+        <span>View Highscores</span>
+    </div>
+    <!-- container for the countdown timer -->
+    <div class="timer-container">
+        <span>Time:</span>
+        <span class="time-count-span">0</span>
+    </div>
+    <!-- start button -->
+    <div>
+        <button id="start-button">Start Game</button>
+    </div>
+    <!-- container for the quiz -->
+    <form hidden id="quiz-form">
+        <!--    container for the question -->
+        <div class="questions-container">
+            <p id="questions-text"></p>
+        </div>
+        <!--    container for the answers -->
+        <div>
+            <input type="radio" name="answer" id="answer_0" value="0" required>
+            <label for="answer_0" id="answer-label-0"></label>
 
+            <input type="radio" name="answer" id="answer_1" value="1">
+            <label for="answer_1" id="answer-label-1"></label>
+
+            <input type="radio" name="answer" id="answer_2" value="2">
+            <label for="answer_2" id="answer-label-2"></label>
+
+            <input type="radio" name="answer" id="answer_3" value="3">
+            <label for="answer_3" id="answer-label-3"></label>
+        </div>
+        <button type="submit">Next</button>
+    </form>
+    <!--    Score container    -->
+    <div id="score-container" hidden>
+        Your Score:<span id="score-text"></span>
+        <!--    input for name/initials -->
+        <input type="text" name="hs-name">
+        <button class="score-save-button">Save</button>
+    </div>
+    <script src="assets/script.js"></script>
 </main>
 </body>
 </html>
+
+
